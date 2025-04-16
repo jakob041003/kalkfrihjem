@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { MapPin, Search } from 'lucide-react';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
+import { toast } from './ui/use-toast';
 
 interface WaterStation {
   navn: string;
@@ -56,7 +57,8 @@ const WaterHardnessSearch: React.FC = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${process.env.VITE_GOOGLE_MAPS_API_KEY}&components=country:DK`);
+      const apiKey = 'AIzaSyD4TSR6N2kKTQ5gvpgTd9uTN-SJrn5WRyc';
+      const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}&components=country:DK`);
       const data = await response.json();
 
       if (data.status === 'OK' && data.results[0]) {
@@ -77,17 +79,36 @@ const WaterHardnessSearch: React.FC = () => {
             address: data.results[0].formatted_address,
             station: foundStation
           });
+          toast({
+            title: "Vandværk fundet!",
+            description: `Kalkindhold for ${foundStation.navn}: ${foundStation.kalk} °dH`
+          });
           setError(null);
         } else {
           setError("Vi kunne ikke finde et vandværk for denne adresse");
+          toast({
+            title: "Ingen match fundet",
+            description: "Prøv en anden adresse eller kontakt dit lokale vandværk.",
+            variant: "destructive"
+          });
           setSearchResult(null);
         }
       } else {
         setError("Kunne ikke finde adressen");
+        toast({
+          title: "Adresse ikke fundet",
+          description: "Tjek venligst adressen og prøv igen.",
+          variant: "destructive"
+        });
         setSearchResult(null);
       }
     } catch (err) {
       setError("Der opstod en fejl ved søgningen");
+      toast({
+        title: "Fejl ved søgning",
+        description: "Prøv igen eller kontakt support.",
+        variant: "destructive"
+      });
       setSearchResult(null);
     }
   };
@@ -138,3 +159,4 @@ const WaterHardnessSearch: React.FC = () => {
 };
 
 export default WaterHardnessSearch;
+
