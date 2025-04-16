@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Info } from 'lucide-react';
 import CTASection from '../components/CTASection';
+import WaterHardnessSearch from '../components/WaterHardnessSearch';
 
 const KalkKortPage = () => {
   // Example data for the map
@@ -43,6 +43,14 @@ const KalkKortPage = () => {
               og dermed om det kunne give mening at investere i et blødgøringsanlæg.
             </p>
           </div>
+          
+          {/* Water hardness search */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-poppins font-semibold mb-6">
+              Find vandets hårdhed på din adresse
+            </h2>
+            <WaterHardnessSearch />
+          </section>
           
           {/* Water hardness map / visual */}
           <section className="mb-12">
