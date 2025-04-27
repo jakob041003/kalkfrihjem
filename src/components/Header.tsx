@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,8 +27,21 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4">
-        <Link to="/" className="text-2xl font-poppins font-bold text-primary">
-          KalkfriHjem<span className="text-gray-600 text-sm">.dk</span>
+        <Link 
+          to="/" 
+          className="group relative flex items-center space-x-1 transition-all duration-300"
+        >
+          <Sparkles 
+            size={20} 
+            className="text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute -left-6"
+          />
+          <div className="relative">
+            <span className="text-2xl font-poppins font-bold bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent hover:from-blue-600 hover:to-primary transition-all duration-300">
+              KalkfriHjem
+            </span>
+            <span className="text-sm text-gray-600 font-medium ml-0.5">.dk</span>
+            <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+          </div>
         </Link>
 
         {/* Desktop menu */}
