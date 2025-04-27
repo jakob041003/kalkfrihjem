@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -97,8 +96,37 @@ export default {
 			},
 			backgroundColor: {
 				'light-gray': '#f0f0f0',
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100%',
+						color: 'inherit',
+						a: {
+							color: '#1e90ff',
+							'&:hover': {
+								color: '#0077ea',
+							},
+						},
+						h1: {
+							fontFamily: 'Poppins, sans-serif',
+						},
+						h2: {
+							fontFamily: 'Poppins, sans-serif',
+						},
+						h3: {
+							fontFamily: 'Poppins, sans-serif',
+						},
+						h4: {
+							fontFamily: 'Poppins, sans-serif',
+						},
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require("@tailwindcss/typography"),
+	],
 } satisfies Config;

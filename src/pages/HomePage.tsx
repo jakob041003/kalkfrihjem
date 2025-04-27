@@ -6,6 +6,9 @@ import ProductComparison from '../components/ProductComparison';
 import AdvantagesSection from '../components/AdvantagesSection';
 import TestimonialSection from '../components/TestimonialSection';
 import CTASection from '../components/CTASection';
+import DetailedContentSection from '../components/DetailedContentSection';
+import PriceInfoSection from '../components/PriceInfoSection';
+import InstallationGuideSection from '../components/InstallationGuideSection';
 
 const HomePage = () => {
   // Sample product data
@@ -43,22 +46,22 @@ const HomePage = () => {
     }
   ];
   
-  // Sample advantages data
+  // Updated advantages data based on the new content
   const advantages = [
-    {
-      icon: '🚿',
-      title: 'Blødere vand',
-      description: 'Bedre for hud og hår, særligt godt for personer med tør hud eller eksem.'
-    },
     {
       icon: '🧼',
       title: 'Mindre kalk',
       description: 'Slut med kalkpletter i bad, på fliser og i køkkenet - nemmere rengøring.'
     },
     {
-      icon: '💰',
-      title: 'Spar penge',
-      description: 'Reducer udgifter til el, rengøringsmidler og vedligehold af apparater.'
+      icon: '⚡',
+      title: 'Spar energi',
+      description: 'Et 2 mm kalklag i varmtvandsbeholderen kan øge energiforbruget med op til 15%.'
+    },
+    {
+      icon: '🛁',
+      title: 'Blødere hud',
+      description: 'Sæbe skummer bedre i blødgjort vand, og huden føles mindre tør.'
     },
     {
       icon: '🔧',
@@ -98,10 +101,10 @@ const HomePage = () => {
         <div className="container mx-auto px-4 relative z-10 text-white">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 leading-tight">
-              Slip for kalk i vandet – find det rette blødgøringsanlæg i 2025
+              Få kalkfrit vand med det bedste blødgøringsanlæg
             </h1>
             <p className="text-xl mb-8">
-              Vi har testet de bedste modeller, så du nemt kan vælge rigtigt
+              Spar tid på rengøring, forlæng levetiden på dine hvidevarer og sænk dit energiforbrug
             </p>
             <Link to="/test-blødgøringsanlæg" className="cta-button">
               Se vores test og anbefalinger <ArrowRight size={20} className="ml-2" />
@@ -127,13 +130,22 @@ const HomePage = () => {
       {/* Testimonials section */}
       <TestimonialSection testimonials={testimonials} />
       
+      {/* Detailed Content Section */}
+      <DetailedContentSection />
+      
+      {/* Price Info Section */}
+      <PriceInfoSection />
+      
+      {/* Installation Guide Section */}
+      <InstallationGuideSection />
+      
       {/* CTA section */}
       <CTASection 
-        title="Klar til et kalkfrit hjem?" 
-        buttonText1="Se vores test"
+        title="Find dit perfekte blødgøringsanlæg i dag" 
+        buttonText1="Se vores top anbefalinger"
         buttonLink1="/test-blødgøringsanlæg"
-        buttonText2="Læs købsguiden"
-        buttonLink2="/blødgøringsanlæg-guide"
+        buttonText2="Tjek din kommunes vandets hårdhed"
+        buttonLink2="/kalk-i-danmark"
       />
     </div>
   );
