@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://kalkfrihjem.dk/</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://kalkfrihjem.dk/test-blødgøringsanlæg</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalkfrihjem.dk/blødgøringsanlæg-guide</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalkfrihjem.dk/installation</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalkfrihjem.dk/kalk-i-danmark</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Section -->
+  <url>
+    <loc>https://kalkfrihjem.dk/blog</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://kalkfrihjem.dk/blog/guide-bedste-bloedgoeringsanlaeg-2025</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset> 
