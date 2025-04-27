@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Testimonial {
   quote: string;
-  author: string;
   location: string;
   image: string;
 }
@@ -17,7 +16,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ testimonials })
     <section className="py-16 bg-light-gray">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-poppins font-bold text-center mb-12">
-          Det siger vores kunder
+          Kundeerfaringer med blødgøringsanlæg
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -29,7 +28,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ testimonials })
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex-shrink-0">
                 <img 
                   src={testimonial.image} 
-                  alt={testimonial.author} 
+                  alt="Kundeerfaring"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -40,8 +39,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ testimonials })
                 </p>
                 
                 <div>
-                  <p className="font-medium">{testimonial.author}</p>
-                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                  <p className="text-sm text-gray-500">Boligejer fra {testimonial.location}</p>
                 </div>
               </div>
             </div>

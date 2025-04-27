@@ -4,57 +4,51 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar } from 'lucide-react';
 
 const BlogPage = () => {
-  // Sample blog posts data
   const blogPosts = [
     {
       id: '1',
-      title: 'Derfor kan kalk øge din elregning med 20%',
-      excerpt: 'Kalk i vandet er ikke kun irriterende for synet - det kan også koste dig dyrt på elregningen. Læs hvordan kalkaflejringer påvirker dine elektriske apparater og hvordan du kan spare penge med blødt vand.',
+      title: 'Guide: Sådan vælger du det bedste blødgøringsanlæg til dit hus i 2025',
+      excerpt: 'Komplet guide til valg af blødgøringsanlæg. Vi gennemgår alle faktorer du skal overveje, fra husets størrelse til forskellige teknologier, så du kan træffe det bedste valg for dit hjem.',
       image: 'https://via.placeholder.com/600x400',
       date: '15. marts 2025',
-      author: 'Martin Jensen',
-      slug: 'kalk-elregning-besparelse',
-      categories: ['Økonomi', 'Energi']
+      slug: 'guide-bedste-bloedgoeringsanlaeg-2025',
+      categories: ['Købsguide', 'Produkttest']
     },
     {
       id: '2',
-      title: '5 grunde til din vaskemaskine ikke holder så længe som den burde',
-      excerpt: 'Er du træt af at udskifte vaskemaskiner oftere end nødvendigt? Kalk er en af de største syndere når det kommer til forkortet levetid for dine hvidevarer. Lær hvordan du kan forlænge levetiden markant.',
+      title: 'Test: De 5 bedste blødgøringsanlæg til private huse',
+      excerpt: 'Vi har testet de mest populære blødgøringsanlæg på det danske marked. Se vores grundige sammenligning af pris, kvalitet og funktioner, så du kan finde den bedste løsning til dit hjem.',
       image: 'https://via.placeholder.com/600x400',
       date: '2. februar 2025',
-      author: 'Louise Nielsen',
-      slug: 'vaskemaskine-levetid-kalk',
-      categories: ['Hvidevarer', 'Vedligehold']
+      slug: 'test-5-bedste-bloedgoeringsanlaeg',
+      categories: ['Test', 'Sammenligning']
     },
     {
       id: '3',
-      title: 'Er blødgøringsanlæg lovligt i Danmark? Her er reglerne',
-      excerpt: 'Der er mange myter omkring lovligheden af blødgøringsanlæg i Danmark. Vi gennemgår de aktuelle regler og krav, så du kan være sikker på at din installation er lovlig og sikker.',
+      title: 'Hvor meget kan du spare med et blødgøringsanlæg? Se beregninger',
+      excerpt: 'Konkrete beregninger og eksempler på besparelser ved installation af blødgøringsanlæg. Fra reduceret energiforbrug til længere levetid på hvidevarer - få det fulde økonomiske overblik.',
       image: 'https://via.placeholder.com/600x400',
       date: '20. januar 2025',
-      author: 'Jens Petersen',
-      slug: 'bloedgoeringsanlaeg-lovgivning',
-      categories: ['Lovgivning', 'Installation']
+      slug: 'besparelser-bloedgoeringsanlaeg-beregninger',
+      categories: ['Økonomi', 'Beregninger']
     },
     {
       id: '4',
-      title: 'Sådan påvirker hårdt vand din hud og dit hår - og hvad du kan gøre ved det',
-      excerpt: 'Oplever du tør hud, irritation eller livløst hår? Årsagen kan være det hårde vand i din vandhane. Få eksperternes råd til at beskytte din hud og dit hår mod kalkens udtørrende effekt.',
+      title: 'Salt vs. saltfri blødgøringsanlæg: Den store guide',
+      excerpt: 'Grundig sammenligning af traditionelle saltbaserede anlæg og moderne saltfri alternativer. Fordele, ulemper og hvilket system der passer bedst til forskellige typer huse.',
       image: 'https://via.placeholder.com/600x400',
       date: '5. januar 2025',
-      author: 'Mette Hansen',
-      slug: 'haardt-vand-hud-haar',
-      categories: ['Sundhed', 'Personlig pleje']
+      slug: 'salt-vs-saltfri-bloedgoeringsanlaeg',
+      categories: ['Teknologi', 'Sammenligning']
     },
     {
       id: '5',
-      title: 'Salt vs. saltfri blødgøringsanlæg - hvad skal du vælge?',
-      excerpt: 'De to hovedtyper af blødgøringsanlæg har hver deres fordele og ulemper. Vi sammenligner teknologierne og hjælper dig med at vælge den rigtige løsning til dit hjem og dine behov.',
+      title: 'Installation af blødgøringsanlæg: Trin-for-trin guide',
+      excerpt: 'Alt du skal vide om installation af blødgøringsanlæg i dit hus. Fra placering og krav til VVS-arbejde og tilslutning. Få den komplette vejledning her.',
       image: 'https://via.placeholder.com/600x400',
       date: '10. december 2024',
-      author: 'Anders Madsen',
-      slug: 'salt-vs-saltfri-anlaeg',
-      categories: ['Produktguide', 'Teknologi']
+      slug: 'installation-bloedgoeringsanlaeg-guide',
+      categories: ['Installation', 'DIY']
     }
   ];
 
@@ -63,13 +57,12 @@ const BlogPage = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
-            Blog - Nyttig viden om blødgøringsanlæg og kalkfrit vand
+            Guide til blødgøringsanlæg - Alt du skal vide
           </h1>
           
           <div className="bg-light-gray p-6 rounded-lg mb-10">
             <p className="text-lg">
-              Velkommen til vores blog, hvor vi deler viden, tips og råd om alt, der vedrører kalk i vandet, 
-              blødgøringsanlæg og hvordan du kan få et mere kalkfrit hjem.
+              Find grundige guides, tests og praktiske råd om blødgøringsanlæg. Vi hjælper dig med at træffe det rigtige valg til dit hjem.
             </p>
           </div>
           
@@ -110,11 +103,7 @@ const BlogPage = () => {
                     {blogPosts[0].excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-600">
-                      Af {blogPosts[0].author}
-                    </div>
-                    
+                  <div className="flex items-center justify-end">
                     <Link
                       to={`/blog/${blogPosts[0].slug}`}
                       className="text-primary font-medium hover:underline flex items-center"
@@ -162,11 +151,7 @@ const BlogPage = () => {
                     {post.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-600">
-                      Af {post.author}
-                    </div>
-                    
+                  <div className="flex items-center justify-end">
                     <Link
                       to={`/blog/${post.slug}`}
                       className="text-primary font-medium hover:underline flex items-center text-sm"

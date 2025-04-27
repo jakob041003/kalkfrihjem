@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -68,17 +67,15 @@ const HomePage = () => {
     }
   ];
   
-  // Sample testimonials data
+  // Updated testimonials without personal names
   const testimonials = [
     {
-      quote: 'Jeg slap for kalk i elkedlen – og min hud føles bedre! Vores badeværelse er så meget nemmere at holde rent nu.',
-      author: 'Anne Nielsen',
+      quote: 'Efter installation af blødgøringsanlæg er vores badeværelse meget nemmere at holde rent, og vi bruger markant mindre tid på afkalkning.',
       location: 'Slagelse',
       image: 'https://via.placeholder.com/150',
     },
     {
-      quote: 'Efter vi fik installeret blødgøringsanlæg, er vores vaskemaskine stoppet med at kalke til. Kæmpe forskel!',
-      author: 'Peter Jensen',
+      quote: 'Vores hvidevarer holder længere nu, og vi kan mærke en betydelig forskel på vandkvaliteten i hele huset.',
       location: 'Roskilde',
       image: 'https://via.placeholder.com/150',
     }
