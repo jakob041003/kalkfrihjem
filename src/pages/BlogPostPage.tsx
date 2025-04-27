@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Calendar } from 'lucide-react';
 
 const BlogPostPage = () => {
   const { slug } = useParams();
